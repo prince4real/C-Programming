@@ -1,0 +1,31 @@
+#include <stdio.h>
+typedef struct rect{
+    int height;
+    int width;
+}prince ;
+
+int areaofrect(prince *arg){
+    int area=arg->height*arg->width;
+    printf("area of rectangle %d",area);
+}
+
+struct Circle {
+    float radius;
+
+};
+
+// Function to calculate the area of a circle
+void calculateArea(struct Circle *c) {
+    float area = 3.14159 * (c->radius * c->radius);
+    printf("Area of the circle: %.2f\n", area);
+}
+
+int main() {
+    struct Circle circle = {5.0};
+    prince arg={5,3};
+    // Passing structure to function by reference
+    calculateArea(&circle);
+    areaofrect(&arg);
+
+    return 0;
+}
